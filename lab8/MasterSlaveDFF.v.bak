@@ -1,0 +1,4 @@
+module MasterSlaveDFF(D, Clock, Qm, Qs, Q);
+input D, Clock;
+wire Qm;
+

@@ -1,6 +1,6 @@
 Fitter report for lab8
-Sun Nov 17 20:32:56 2019
-Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Sun Nov 17 21:12:05 2019
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -24,16 +24,18 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
  16. Fitter Resource Utilization by Entity
  17. Delay Chain Summary
  18. Pad To Core Delay Chain Fanout
- 19. Non-Global High Fan-Out Signals
- 20. Other Routing Usage Summary
- 21. LAB Logic Elements
- 22. LAB Signals Sourced
- 23. LAB Signals Sourced Out
- 24. LAB Distinct Inputs
- 25. Fitter Device Options
- 26. Operating Settings and Conditions
- 27. Fitter Messages
- 28. Fitter Suppressed Messages
+ 19. Control Signals
+ 20. Non-Global High Fan-Out Signals
+ 21. Other Routing Usage Summary
+ 22. LAB Logic Elements
+ 23. LAB-wide Signals
+ 24. LAB Signals Sourced
+ 25. LAB Signals Sourced Out
+ 26. LAB Distinct Inputs
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Fitter Messages
+ 30. Fitter Suppressed Messages
 
 
 
@@ -59,17 +61,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +------------------------------------+------------------------------------------+
-; Fitter Status                      ; Successful - Sun Nov 17 20:32:56 2019    ;
-; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Fitter Status                      ; Successful - Sun Nov 17 21:12:05 2019    ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; lab8                                     ;
-; Top-level Entity Name              ; GatedDlatch                              ;
+; Top-level Entity Name              ; flipflop                                 ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C35F672C6                             ;
 ; Timing Models                      ; Final                                    ;
 ; Total logic elements               ; 1 / 33,216 ( < 1 % )                     ;
-;     Total combinational functions  ; 1 / 33,216 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                       ;
-; Total registers                    ; 0                                        ;
+;     Total combinational functions  ; 0 / 33,216 ( 0 % )                       ;
+;     Dedicated logic registers      ; 1 / 33,216 ( < 1 % )                     ;
+; Total registers                    ; 1                                        ;
 ; Total pins                         ; 3 / 475 ( < 1 % )                        ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                      ;
@@ -136,12 +138,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.50        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;  20.0%      ;
+;     2-4 processors         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
@@ -192,22 +194,22 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
 ; Total logic elements                        ; 1 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 1                    ;
-;     -- Register only                        ; 0                    ;
+;     -- Combinational with no register       ; 0                    ;
+;     -- Register only                        ; 1                    ;
 ;     -- Combinational with a register        ; 0                    ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
 ;     -- 4 input functions                    ; 0                    ;
-;     -- 3 input functions                    ; 1                    ;
+;     -- 3 input functions                    ; 0                    ;
 ;     -- <=2 input functions                  ; 0                    ;
-;     -- Register only                        ; 0                    ;
+;     -- Register only                        ; 1                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 1                    ;
+;     -- normal mode                          ; 0                    ;
 ;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
-; Total registers*                            ; 0 / 34,593 ( 0 % )   ;
-;     -- Dedicated logic registers            ; 0 / 33,216 ( 0 % )   ;
+; Total registers*                            ; 1 / 34,593 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 1 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )    ;
 ;                                             ;                      ;
 ; Total LABs:  partially or completely used   ; 1 / 2,076 ( < 1 % )  ;
@@ -227,10 +229,10 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 2                    ;
-; Highest non-global fan-out                  ; 2                    ;
+; Maximum fan-out                             ; 1                    ;
+; Highest non-global fan-out                  ; 1                    ;
 ; Total fan-out                               ; 4                    ;
-; Average fan-out                             ; 0.57                 ;
+; Average fan-out                             ; 0.50                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -244,22 +246,22 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
 ; Total logic elements                        ; 1 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 1                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
+;     -- Combinational with no register       ; 0                   ; 0                              ;
+;     -- Register only                        ; 1                   ; 0                              ;
 ;     -- Combinational with a register        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
 ;     -- 4 input functions                    ; 0                   ; 0                              ;
-;     -- 3 input functions                    ; 1                   ; 0                              ;
+;     -- 3 input functions                    ; 0                   ; 0                              ;
 ;     -- <=2 input functions                  ; 0                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
+;     -- Register only                        ; 1                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 1                   ; 0                              ;
+;     -- normal mode                          ; 0                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 0                   ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 33216 ( 0 % )   ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 1                   ; 0                              ;
+;     -- Dedicated logic registers            ; 1 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                     ;                                ;
 ; Total LABs:  partially or completely used   ; 1 / 2076 ( < 1 % )  ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                     ;                                ;
@@ -277,7 +279,7 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
 ;     -- Total Connections                    ; 4                   ; 0                              ;
-;     -- Registered Connections               ; 0                   ; 0                              ;
+;     -- Registered Connections               ; 1                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -304,14 +306,14 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 +---------------------------------------------+---------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                 ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Clk  ; D13   ; 3        ; 31           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; D    ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-+------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                  ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Clock ; D13   ; 3        ; 31           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; D     ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
++-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -586,7 +588,7 @@ The pin-out file can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.pi
 ; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D13      ; 432        ; 3        ; Clk                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 432        ; 3        ; Clock                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1062,20 +1064,20 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |GatedDlatch               ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 3    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |GatedDlatch        ;              ;
+; |flipflop                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 3    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |flipflop           ;              ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------+
-; Delay Chain Summary                                                           ;
-+------+----------+---------------+---------------+-----------------------+-----+
-; Name ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+------+----------+---------------+---------------+-----------------------+-----+
-; Q    ; Output   ; --            ; --            ; --                    ; --  ;
-; D    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; Clk  ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-+------+----------+---------------+---------------+-----------------------+-----+
++--------------------------------------------------------------------------------+
+; Delay Chain Summary                                                            ;
++-------+----------+---------------+---------------+-----------------------+-----+
+; Name  ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++-------+----------+---------------+---------------+-----------------------+-----+
+; Q     ; Output   ; --            ; --            ; --                    ; --  ;
+; D     ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; Clock ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
++-------+----------+---------------+---------------+-----------------------+-----+
 
 
 +---------------------------------------------------+
@@ -1084,8 +1086,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; D                   ;                   ;         ;
-; Clk                 ;                   ;         ;
+; Clock               ;                   ;         ;
 +---------------------+-------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                   ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Clock ; PIN_D13  ; 1       ; Clock ; no     ; --                   ; --               ; --                        ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------+
@@ -1093,9 +1104,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+------------------------+
 ; Name   ; Fan-Out                ;
 +--------+------------------------+
-; comb~0 ; 2                      ;
-; Clk    ; 1                      ;
+; Clock  ; 1                      ;
 ; D      ; 1                      ;
+; Q~reg0 ; 1                      ;
 +--------+------------------------+
 
 
@@ -1109,7 +1120,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; C4 interconnects            ; 3 / 60,840 ( < 1 % ) ;
 ; Direct links                ; 0 / 94,460 ( 0 % )   ;
 ; Global clocks               ; 0 / 16 ( 0 % )       ;
-; Local interconnects         ; 1 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 0 / 33,216 ( 0 % )   ;
 ; R24 interconnects           ; 0 / 3,091 ( 0 % )    ;
 ; R4 interconnects            ; 0 / 81,294 ( 0 % )   ;
 +-----------------------------+----------------------+
@@ -1139,13 +1150,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+-----------------------------+
 
 
++------------------------------------------------------------------+
+; LAB-wide Signals                                                 ;
++------------------------------------+-----------------------------+
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 1) ;
++------------------------------------+-----------------------------+
+; 1 Clock                            ; 1                           ;
++------------------------------------+-----------------------------+
+
+
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 1.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced  (Average = 2.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1203,9 +1224,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Fitter
+Info: Running Quartus II 64-Bit Fitter
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun Nov 17 20:32:51 2019
+    Info: Processing started: Sun Nov 17 21:12:01 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lab8 -c lab8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP2C35F672C6 for design "lab8"
@@ -1223,8 +1244,7 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
 Critical Warning (169085): No exact pin location assignment(s) for 3 pins of 3 total pins
     Info (169086): Pin Q not assigned to an exact location on the device
     Info (169086): Pin D not assigned to an exact location on the device
-    Info (169086): Pin Clk not assigned to an exact location on the device
-Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+    Info (169086): Pin Clock not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
@@ -1263,14 +1283,14 @@ Warning (306006): Found 1 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file F:/GitHubCode/Quartos/lab8/output_files/lab8.fit.smsg
-Info: Quartus II 32-bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 496 megabytes
-    Info: Processing ended: Sun Nov 17 20:32:56 2019
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Sun Nov 17 21:12:05 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+

@@ -1,0 +1,6 @@
+lab8
+Clock,input,user_entered
+D,input,user_entered
+Q,output,user_entered
+Q~reg0,reg,compiler_generated
+,hierarchy,user_entered

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for lab8
-Sun Nov 17 20:32:49 2019
-Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Sun Nov 17 21:12:00 2019
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -13,10 +13,9 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,15 +41,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 17 20:32:49 2019    ;
-; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 17 21:12:00 2019    ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; lab8                                     ;
-; Top-level Entity Name              ; GatedDlatch                              ;
+; Top-level Entity Name              ; flipflop                                 ;
 ; Family                             ; Cyclone II                               ;
 ; Total logic elements               ; 1                                        ;
-;     Total combinational functions  ; 1                                        ;
-;     Dedicated logic registers      ; 0                                        ;
-; Total registers                    ; 0                                        ;
+;     Total combinational functions  ; 0                                        ;
+;     Dedicated logic registers      ; 1                                        ;
+; Total registers                    ; 1                                        ;
 ; Total pins                         ; 3                                        ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -65,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; GatedDlatch        ; lab8               ;
+; Top-level entity name                                                      ; flipflop           ; lab8               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -161,13 +160,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; GatedDlatch.v                    ; yes             ; User Verilog HDL File  ; F:/GitHubCode/Quartos/lab8/GatedDlatch.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+------------------------+---------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path          ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------+---------+
+; flipflop.v                       ; yes             ; User Verilog HDL File  ; F:/GitHubCode/Quartos/lab8/flipflop.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -177,25 +176,25 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Estimated Total logic elements              ; 1     ;
 ;                                             ;       ;
-; Total combinational functions               ; 1     ;
+; Total combinational functions               ; 0     ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 1     ;
+;     -- 3 input functions                    ; 0     ;
 ;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
+;     -- normal mode                          ; 0     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 1     ;
+;     -- Dedicated logic registers            ; 1     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 3     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 4     ;
-; Average fan-out                             ; 1.00  ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 3     ;
+; Average fan-out                             ; 0.75  ;
 +---------------------------------------------+-------+
 
 
@@ -204,20 +203,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |GatedDlatch               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |GatedDlatch        ;              ;
+; |flipflop                  ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |flipflop           ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; Q                                                      ;   ;
-; Number of logic cells representing combinational loops ; 1 ;
-+--------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -225,7 +213,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -248,30 +236,33 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun Nov 17 20:32:48 2019
+    Info: Processing started: Sun Nov 17 21:11:58 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 0 design units, including 0 entities, in source file lab8.v
-Info (12021): Found 0 design units, including 0 entities, in source file ff.v
 Warning (12018): Entity "TFF" will be ignored because it conflicts with Quartus II primitive name
 Info (12021): Found 1 design units, including 1 entities, in source file tff.v
 Info (12021): Found 1 design units, including 1 entities, in source file gateddlatch.v
     Info (12023): Found entity 1: GatedDlatch
-Warning (10236): Verilog HDL Implicit Net warning at GatedDlatch.v(7): created implicit net for "D_a"
-Warning (10236): Verilog HDL Implicit Net warning at GatedDlatch.v(8): created implicit net for "D_b"
-Info (12127): Elaborating entity "GatedDlatch" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file masterslavedff.v
+    Info (12023): Found entity 1: MasterSlaveDFF
+Info (12021): Found 1 design units, including 1 entities, in source file flipflop.v
+    Info (12023): Found entity 1: flipflop
+Warning (10236): Verilog HDL Implicit Net warning at GatedDlatch.v(8): created implicit net for "D_a"
+Warning (10236): Verilog HDL Implicit Net warning at GatedDlatch.v(11): created implicit net for "D_b"
+Info (12127): Elaborating entity "flipflop" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 1 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 353 megabytes
-    Info: Processing ended: Sun Nov 17 20:32:49 2019
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4593 megabytes
+    Info: Processing ended: Sun Nov 17 21:12:00 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

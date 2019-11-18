@@ -1,8 +1,6 @@
-|GatedDlatch
-D => D_a.IN0
-D => D_b.IN0
-Clk => D_a.IN1
-Clk => D_b.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+|flipflop
+D => Q~reg0.DATAIN
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
