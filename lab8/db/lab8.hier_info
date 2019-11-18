@@ -1,0 +1,8 @@
+|GatedDlatch
+D => D_a.IN0
+D => D_b.IN0
+Clk => D_a.IN1
+Clk => D_b.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

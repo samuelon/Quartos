@@ -1,1 +1,2 @@
- module lab8();
+//module lab8();
+//endmodule

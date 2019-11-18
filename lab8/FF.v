@@ -1,1 +1,1 @@
-module FF(D,Clock,Q,Qn);
+//module FF(D,Clock,Q,Qn);
