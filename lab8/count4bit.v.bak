@@ -1,0 +1,4 @@
+module bit4Count(T, Clock, Q);
+input T, Clock;
+output reg Q;
+

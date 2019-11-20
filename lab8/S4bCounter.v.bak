@@ -1,0 +1,4 @@
+module S4bCounter(T, Clock, Q);
+input T, Clock;
+output [0:4]Q;
+

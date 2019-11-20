@@ -3,6 +3,6 @@ input D, Clock;
 output reg Q;
 
 always@(posedge Clock)
-Q = D;
+	Q = D;
 
 endmodule

@@ -1,0 +1,9 @@
+module upcountTFF(T,Clock,Q);
+input T, Clock;
+output [0:2]Q;
+
+TFlipFlop Q0(T,Clock,Q[0]);
+TFlipFlop Q1(T,,~Q[0],Q[1]);
+TFlipFlop Q2(T,~Q[1],Q[2]);
+
+endmodule

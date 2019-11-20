@@ -1,0 +1,4 @@
+module bit5LFSRegister(D,Clock,Q);
+input D, Clock;
+output Q;
+
