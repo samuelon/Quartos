@@ -5,4 +5,4 @@ output reg Q;
 always@(posedge Clock)
 	Q = D;
 
-endmodule
+endmodule)

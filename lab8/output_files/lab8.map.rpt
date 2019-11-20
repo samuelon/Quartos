@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab8
-Tue Nov 19 19:45:03 2019
+Tue Nov 19 22:33:45 2019
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -14,8 +14,10 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -41,16 +43,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 19 19:45:03 2019    ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 19 22:33:45 2019    ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; lab8                                     ;
 ; Top-level Entity Name              ; bit5LFSRegister                          ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 4                                        ;
-;     Total combinational functions  ; 0                                        ;
-;     Dedicated logic registers      ; 4                                        ;
-; Total registers                    ; 4                                        ;
-; Total pins                         ; 6                                        ;
+; Total logic elements               ; 5                                        ;
+;     Total combinational functions  ; 1                                        ;
+;     Dedicated logic registers      ; 5                                        ;
+; Total registers                    ; 5                                        ;
+; Total pins                         ; 8                                        ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                        ;
@@ -165,8 +167,8 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
-; flipflop.v                       ; yes             ; User Verilog HDL File  ; F:/GitHubCode/Quartos/lab8/flipflop.v        ;         ;
 ; bit5LFSRegister.v                ; yes             ; User Verilog HDL File  ; F:/GitHubCode/Quartos/lab8/bit5LFSRegister.v ;         ;
+; flipflopp.v                      ; yes             ; User Verilog HDL File  ; F:/GitHubCode/Quartos/lab8/flipflopp.v       ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
 
 
@@ -175,41 +177,42 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 4     ;
+; Estimated Total logic elements              ; 5     ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 1     ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- <=2 input functions                  ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 1     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 4     ;
-;     -- Dedicated logic registers            ; 4     ;
+; Total registers                             ; 5     ;
+;     -- Dedicated logic registers            ; 5     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 6     ;
+; I/O pins                                    ; 8     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 4     ;
-; Total fan-out                               ; 12    ;
-; Average fan-out                             ; 1.20  ;
+; Maximum fan-out                             ; 5     ;
+; Total fan-out                               ; 21    ;
+; Average fan-out                             ; 1.50  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                  ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; |bit5LFSRegister           ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |bit5LFSRegister             ;              ;
-;    |flipflop:Q1|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflop:Q1 ;              ;
-;    |flipflop:Q2|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflop:Q2 ;              ;
-;    |flipflop:Q3|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflop:Q3 ;              ;
-;    |flipflop:Q4|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflop:Q4 ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; |bit5LFSRegister           ; 1 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |bit5LFSRegister              ;              ;
+;    |flipflopp:Q1|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflopp:Q1 ;              ;
+;    |flipflopp:Q2|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflopp:Q2 ;              ;
+;    |flipflopp:Q3|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflopp:Q3 ;              ;
+;    |flipflopp:Q4|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflopp:Q4 ;              ;
+;    |flipflopp:Q5|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bit5LFSRegister|flipflopp:Q5 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -218,14 +221,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; flipflopp:Q5|Q                         ; 1       ;
+; flipflopp:Q4|Q                         ; 2       ;
+; flipflopp:Q3|Q                         ; 2       ;
+; flipflopp:Q2|Q                         ; 2       ;
+; flipflopp:Q1|Q                         ; 2       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
 
 
 +-------------------------------+
@@ -243,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Tue Nov 19 19:45:01 2019
+    Info: Processing started: Tue Nov 19 22:33:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 0 design units, including 0 entities, in source file lab8.v
@@ -265,21 +282,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file s4bcoun
     Info (12023): Found entity 1: S4bCounter
 Info (12021): Found 1 design units, including 1 entities, in source file bit5lfsregister.v
     Info (12023): Found entity 1: bit5LFSRegister
+Info (12021): Found 1 design units, including 1 entities, in source file muxdff.v
+    Info (12023): Found entity 1: muxdff
+Info (12021): Found 1 design units, including 1 entities, in source file shfit4.v
+    Info (12023): Found entity 1: shift4
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopp.v
+    Info (12023): Found entity 1: flipflopp
 Warning (10236): Verilog HDL Implicit Net warning at S4bCounter.v(9): created implicit net for "Q0Q1"
 Warning (10236): Verilog HDL Implicit Net warning at S4bCounter.v(12): created implicit net for "Q0Q2"
 Warning (10236): Verilog HDL Implicit Net warning at S4bCounter.v(15): created implicit net for "Q0Q3"
 Info (12127): Elaborating entity "bit5LFSRegister" for the top level hierarchy
-Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:Q1"
+Info (12128): Elaborating entity "flipflopp" for hierarchy "flipflopp:Q1"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (144001): Generated suppressed messages file F:/GitHubCode/Quartos/lab8/output_files/lab8.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 5 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 352 megabytes
-    Info: Processing ended: Tue Nov 19 19:45:03 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Nov 19 22:33:45 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/GitHubCode/Quartos/lab8/output_files/lab8.map.smsg.
 
 

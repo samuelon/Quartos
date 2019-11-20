@@ -1,13 +1,15 @@
-module bit5LFSRegister(D,Clock,Q);
-input D, Clock;
-output [0:3]Q;
+module bit5LFSRegister(D,Preset, Clock,Q);
+input D,Clock, Preset;
+output [0:4]Q;
 
-flipflop Q1 (D,Clock,Q[0]);
+flipflopp Q1 (D,Preset,Clock,Q[0]);
 
-flipflop Q2 (Q[0],Clock,Q[1]);
+flipflopp Q2 (Q[0],Preset,Clock,Q[1]);
 
-flipflop Q3 (Q[1],Clock,Q[2]);
+flipflopp Q3 (Q[1],Preset,Clock,Q[2]);
 
-flipflop Q4 (Q[2],Clock,Q[3]);
+flipflopp Q4 (Q[2],Preset,Clock,Q[3]);
+
+flipflopp Q5 (Q[3],Preset,Clock,Q[4]);
 
 endmodule
