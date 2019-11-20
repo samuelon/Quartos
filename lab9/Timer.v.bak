@@ -1,0 +1,3 @@
+module Timer(D,Resetn,Clock,Q);
+input D, Resetn,
+//down counter for n amount of values

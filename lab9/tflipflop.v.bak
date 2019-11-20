@@ -1,0 +1,10 @@
+module tflipflop(T,Clock,Q);
+input T, Clock;
+output Q;
+
+always@(posedge Clock)
+begin
+		Q = ~T;
+end
+
+endmodule
