@@ -1,0 +1,38 @@
+|Timer
+T[0] => ~NO_FANOUT~
+T[1] => ~NO_FANOUT~
+T[2] => ~NO_FANOUT~
+T[3] => ~NO_FANOUT~
+T[4] => ~NO_FANOUT~
+T[5] => ~NO_FANOUT~
+T[6] => ~NO_FANOUT~
+T[7] => ~NO_FANOUT~
+T[8] => ~NO_FANOUT~
+T[9] => ~NO_FANOUT~
+T[10] => ~NO_FANOUT~
+T[11] => ~NO_FANOUT~
+T[12] => ~NO_FANOUT~
+T[13] => ~NO_FANOUT~
+T[14] => ~NO_FANOUT~
+T[15] => ~NO_FANOUT~
+T[16] => ~NO_FANOUT~
+T[17] => ~NO_FANOUT~
+T[18] => ~NO_FANOUT~
+T[19] => ~NO_FANOUT~
+T[20] => ~NO_FANOUT~
+T[21] => ~NO_FANOUT~
+T[22] => ~NO_FANOUT~
+T[23] => ~NO_FANOUT~
+T[24] => ~NO_FANOUT~
+T[25] => ~NO_FANOUT~
+T[26] => ~NO_FANOUT~
+T[27] => ~NO_FANOUT~
+T[28] => ~NO_FANOUT~
+T[29] => ~NO_FANOUT~
+T[30] => ~NO_FANOUT~
+T[31] => ~NO_FANOUT~
+Resetn => Q~reg0.ACLR
+Clock => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

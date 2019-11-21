@@ -28,7 +28,7 @@ else
 				 
 				 else if (D[1])
 				//timer for max amount of green time called t_secondary
-						y < = A;
+						y <= A;
 				//timer for min amount of time, t_yellow
 				 else	 y <= A;
 			// input Timer(4/2,Resetn, Clock, Q) once it finishes then change to C	 
@@ -38,3 +38,5 @@ else
 			
 			default: y <= 2'bxx;
 		endcase
+		
+endmodule

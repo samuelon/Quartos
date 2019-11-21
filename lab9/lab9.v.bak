@@ -25,5 +25,3 @@ else
 			B : 		y <= C;
 		//must have a timer
 			C : 		y <= A;
-			endcase
-endmodule

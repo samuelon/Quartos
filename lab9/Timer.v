@@ -1,15 +1,21 @@
-module Timer(T,Resetn,Clock,Q);
-input Resetn,Clock;
-input [31:0]T;
-
-output reg Q;
+module Timer(Resetn,Clock,t_yellow,t_sec);
+output reg t_yellow, t_sec;
+input Resetn,Clock,State;
+output reg [29:0]Q;
 
 always @ (negedge Resetn, posedge Clock)
-if (!Resetn )
-	Q<=0;
-else 
-	Q<= Q - 1;
-
-//down counter for n amount of values
+begin
+	if (!Resetn )
+		Q <= 29'b0;
+//	else if (state == 1)
+//		Q <= 29'b0;
+	else if ( Q <= 29'H1FFFFFFF)
+		Q <= Q + 1'b1;
+	else
+		Q<=Q;
+end
+		//up counter for n amount of values
+assign t_yellow = Q[2];
+assign t_sec = Q[3];
 
 endmodule

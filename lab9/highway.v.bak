@@ -1,0 +1,30 @@
+moduel HWY()module highway(Resetn,Clock,S,P,Z);
+input Clock, Reset, w;
+output reg [2:0]z;
+//y is the present state
+//Y is the next state
+reg[2:1]y,Y;
+reg [16:0]LEDR;
+reg [6:0]LEDG;
+
+ 
+
+parameter[2:1] A = 2'b00, B = 2'b01, C = 2'b10;
+
+//Define the next state combinational circuit
+
+always@(*)
+begin
+	case(y)
+		A: LEDG[6] = 1'b1;
+			LEDG[4] = 1'b0;
+			LEDG[2] = 1'b0;
+			LEDR[16] = 1'b0;
+			LEDR[14] = 1'b0;
+			LEDR[12] = 1'b0;
+			LEDR[10] = 1'b0;
+			LEDR[8] = 1'b0;
+			LEDR[6] = 1'b0;
+		if(t_sec = 1'b0)
+				Y = A;
+			else if

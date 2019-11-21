@@ -1,7 +1,7 @@
 module pedestrian(D, Clock, Q);
 input D, Clock;
 
-Output Q;
+output reg Q;
 
 // turn on the led or off
 always@ ( posedge Clock)
