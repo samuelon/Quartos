@@ -3,7 +3,7 @@
     <hash md5_digest_80b="00000000000000000000"/>
   </project>
   <file_info>
-    <file checksum="0x002F7843" device="EP2C35F672C6" path="lab9.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x1C784B45" device="EPCS16" path="lab9.pof" usercode="0x00000000"/>
+    <file checksum="0x002F7E8B" device="EP2C35F672C6" path="lab9.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x1C791BC2" device="EPCS16" path="lab9.pof" usercode="0x00000000"/>
   </file_info>
 </sld_project_info>

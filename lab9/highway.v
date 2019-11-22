@@ -1,7 +1,7 @@
-module highway(Resetn,Clock,CarPres,PedReq);
+module highway(Resetn,Clock,CarSec,CarPres,PedReq);
 
 input Clock, Resetn;
-input CarPres,PedReq;
+input CarPres,PedReq,CarSec;
 
 //currSt present state
 //nextSt next state
@@ -67,13 +67,15 @@ begin
 					nextSt = ped_G;
 				end else if (pedStr == 1'b0 && carStr == 1'b1) begin
 					nextSt = sec_G; 
-				end 
-				// else if beging (pedStr == 1'b0 && carStr == 1'b1) begin
-				
-				//end
-				
-		end else begin 
-				nextSt = hwy_Y;
+				end else if (carPednSrvd == 1 ) begin
+					nextSt = sec_G;
+					carPednSrvd = 0;
+				end else if (carPednSrvd == 0) begin
+					nextSt = ped_G;	
+					carPednSrvd = 1;
+				end else begin 
+					nextSt = hwy_Y;
+				end
 		end
 	end 
 	sec_G:begin
@@ -88,13 +90,14 @@ begin
 			LEDR[6] = 1'b1; //red light ped
 			//if there is an extra car, then prolong the time
 			//else per norm
-		if (carStr == 1'b1 )
+		if (CarSec == 1'b1 && tYel == 1'b1)
 			if (tSec == 1'b1 )
 				nextSt = sec_Y;
-		else if ( tYel == 1)
+			else // maybe not right must make sure with board
+				nextSt = sec_Y;
+		else if ( CarSec == 1'b0 && tYel == 1'b0)
 			nextSt = sec_Y;
-			end
-			
+	end		
 	sec_Y:begin
 			LEDG[6] = 1'b0;
 			LEDG[4] = 1'b0;
@@ -105,26 +108,27 @@ begin
 			LEDR[10] = 1'b0;
 			LEDR[8] = 1'b0;
 			LEDR[6] = 1'b1; //redlight ped
-			if ( tYel)
-			nextSt = sec_R;
+			if ( tYel == 1'b1)
+			nextSt = hwy_G;
 			else
 			nextSt = sec_Y;
-			end
-			
-	sec_R:begin
+	end		
+//	sec_R:begin
+//			LEDG[6] = 1'b0;
+//			LEDG[4] = 1'b0; 
+//			LEDG[2] = 1'b0;
+//			LEDR[16] = 1'b0;
+//			LEDR[14] = 1'b1; //red light hwy
+//			LEDR[12] = 1'b0;
+//			LEDR[10] = 1'b1; // Red Light sec_R
+//			LEDR[8] = 1'b0;
+//			LEDR[6] = 1'b1; //red light ped
+//			//create case for if the line up was ped next
+//			//if ... go to ped_G else
+//			nextSt = hwy_G;
+//	end
+	ped_G:begin
 			LEDG[6] = 1'b0;
-			LEDG[4] = 1'b0; 
-			LEDG[2] = 1'b0;
-			LEDR[16] = 1'b0;
-			LEDR[14] = 1'b1; //red light hwy
-			LEDR[12] = 1'b0;
-			LEDR[10] = 1'b1; // Red Light sec_R
-			LEDR[8] = 1'b0;
-			LEDR[6] = 1'b1; //red light ped
-			//create case for if the line up was ped next
-			//if ... go to ped_G else
-			nextSt = hwy_G;
-	ped_G:LEDG[6] = 1'b0;
 			LEDG[4] = 1'b0; 
 			LEDG[2] = 1'b1; // Green Light ped_G
 			LEDR[16] = 1'b0;
@@ -133,12 +137,12 @@ begin
 			LEDR[10] = 1'b1; //red light sec
 			LEDR[8] = 1'b0;
 			LEDR[6] = 1'b0;
-			if (tSec == 1) // green max time
-			nextSt = ped_Y;
-			else
-			nextSt = ped_G;
+			if (tSec == 1'b1) begin// green max time
+				nextSt = ped_Y;
+			end else begin
+				nextSt = ped_G;
 			end
-			
+	end
 	ped_Y:begin
 			LEDG[6] = 1'b0;
 			LEDG[4] = 1'b0;
@@ -150,23 +154,23 @@ begin
 			LEDR[8] = 1'b1; // Yellow light ped_Y
 			LEDR[6] = 1'b0;
 			if ( tYel == 1)
-			nextSt = ped_R;
+			nextSt = hwy_G;
 			else
 			nextSt = ped_Y;
-			end
-	ped_R:begin
-			LEDG[6] = 1'b0;
-			LEDG[4] = 1'b0;
-			LEDG[2] = 1'b0;
-			LEDR[16] = 1'b0;
-			LEDR[14] = 1'b1; // red light hwy 
-			LEDR[12] = 1'b0;
-			LEDR[10] = 1'b1; // red light sec
-			LEDR[8] = 1'b0;
-			LEDR[6] = 1'b1; // Red light ped_R
-			//make case for if sec is pushed etc.
-			nextSt = hwy_G;
-			end
+	end
+//	ped_R:begin
+//			LEDG[6] = 1'b0;
+//			LEDG[4] = 1'b0;
+//			LEDG[2] = 1'b0;
+//			LEDR[16] = 1'b0;
+//			LEDR[14] = 1'b1; // red light hwy 
+//			LEDR[12] = 1'b0;
+//			LEDR[10] = 1'b1; // red light sec
+//			LEDR[8] = 1'b0;
+//			LEDR[6] = 1'b1; // Red light ped_R
+//			//make case for if sec is pushed etc.
+//			nextSt = hwy_G;
+//	end
 	endcase
 end
 //Define the sequential block

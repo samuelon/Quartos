@@ -1,45 +1,32 @@
-|bit5LFSRegister
-D => D.IN1
-Preset => Preset.IN5
-Clock => Clock.IN5
-Q[4] <= flipflopp:Q5.port3
-Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
-Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+|upcountTFF
+T => T~0.IN4
+Clock => Clock~0.IN1
+Q[3] <= TFlipFlop:Q3.port2
+Q[2] <= TFlipFlop:Q2.port2
+Q[1] <= TFlipFlop:Q1.port2
+Q[0] <= TFlipFlop:Q0.port2
 
 
-|bit5LFSRegister|flipflopp:Q1
-D => Q~reg0.DATAIN
-Preset => Q~reg0.PRESET
+|upcountTFF|TFlipFlop:Q0
+T => Q~reg0.ENA
 Clock => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|bit5LFSRegister|flipflopp:Q2
-D => Q~reg0.DATAIN
-Preset => Q~reg0.PRESET
+|upcountTFF|TFlipFlop:Q1
+T => Q~reg0.ENA
 Clock => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|bit5LFSRegister|flipflopp:Q3
-D => Q~reg0.DATAIN
-Preset => Q~reg0.PRESET
+|upcountTFF|TFlipFlop:Q2
+T => Q~reg0.ENA
 Clock => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|bit5LFSRegister|flipflopp:Q4
-D => Q~reg0.DATAIN
-Preset => Q~reg0.PRESET
-Clock => Q~reg0.CLK
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|bit5LFSRegister|flipflopp:Q5
-D => Q~reg0.DATAIN
-Preset => Q~reg0.PRESET
+|upcountTFF|TFlipFlop:Q3
+T => Q~reg0.ENA
 Clock => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
