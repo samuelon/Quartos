@@ -1,6 +1,6 @@
 Analysis & Synthesis report for lab9
-Thu Nov 21 09:44:10 2019
-Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Fri Nov 22 15:33:35 2019
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -10,12 +10,7 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,20 +36,20 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 21 09:44:09 2019    ;
-; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Failed - Fri Nov 22 15:33:35 2019        ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; lab9                                     ;
-; Top-level Entity Name              ; Timer                                    ;
+; Top-level Entity Name              ; highway                                  ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 1                                        ;
-;     Total combinational functions  ; 1                                        ;
-;     Dedicated logic registers      ; 1                                        ;
-; Total registers                    ; 1                                        ;
-; Total pins                         ; 35                                       ;
-; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0                                        ;
-; Embedded Multiplier 9-bit elements ; 0                                        ;
-; Total PLLs                         ; 0                                        ;
+; Total logic elements               ; N/A until Partition Merge                ;
+;     Total combinational functions  ; N/A until Partition Merge                ;
+;     Dedicated logic registers      ; N/A until Partition Merge                ;
+; Total registers                    ; N/A until Partition Merge                ;
+; Total pins                         ; N/A until Partition Merge                ;
+; Total virtual pins                 ; N/A until Partition Merge                ;
+; Total memory bits                  ; N/A until Partition Merge                ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
+; Total PLLs                         ; N/A until Partition Merge                ;
 +------------------------------------+------------------------------------------+
 
 
@@ -64,7 +59,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; Timer              ; lab9               ;
+; Top-level entity name                                                      ; highway            ; lab9               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,85 +149,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path       ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-; Timer.v                          ; yes             ; User Verilog HDL File  ; C:/GitHubRepo/Quartos/lab9/Timer.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1     ;
-;                                             ;       ;
-; Total combinational functions               ; 1     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 1     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 1     ;
-;     -- Dedicated logic registers            ; 1     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 35    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 5     ;
-; Average fan-out                             ; 0.14  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Timer                     ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |Timer              ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Thu Nov 21 09:44:07 2019
+    Info: Processing started: Fri Nov 22 15:33:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab9 -c lab9
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hwy.v
@@ -245,52 +168,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file timer.v
     Info (12023): Found entity 1: Timer
 Info (12021): Found 1 design units, including 1 entities, in source file secondary.v
     Info (12023): Found entity 1: secondary
+Info (12021): Found 1 design units, including 1 entities, in source file highway.v
+    Info (12023): Found entity 1: highway
 Warning (10236): Verilog HDL Implicit Net warning at secondary.v(8): created implicit net for "t_secondary"
-Info (12127): Elaborating entity "Timer" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Timer.v(11): truncated value with size 32 to match size of target (1)
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "T[0]"
-    Warning (15610): No output dependent on input pin "T[1]"
-    Warning (15610): No output dependent on input pin "T[2]"
-    Warning (15610): No output dependent on input pin "T[3]"
-    Warning (15610): No output dependent on input pin "T[4]"
-    Warning (15610): No output dependent on input pin "T[5]"
-    Warning (15610): No output dependent on input pin "T[6]"
-    Warning (15610): No output dependent on input pin "T[7]"
-    Warning (15610): No output dependent on input pin "T[8]"
-    Warning (15610): No output dependent on input pin "T[9]"
-    Warning (15610): No output dependent on input pin "T[10]"
-    Warning (15610): No output dependent on input pin "T[11]"
-    Warning (15610): No output dependent on input pin "T[12]"
-    Warning (15610): No output dependent on input pin "T[13]"
-    Warning (15610): No output dependent on input pin "T[14]"
-    Warning (15610): No output dependent on input pin "T[15]"
-    Warning (15610): No output dependent on input pin "T[16]"
-    Warning (15610): No output dependent on input pin "T[17]"
-    Warning (15610): No output dependent on input pin "T[18]"
-    Warning (15610): No output dependent on input pin "T[19]"
-    Warning (15610): No output dependent on input pin "T[20]"
-    Warning (15610): No output dependent on input pin "T[21]"
-    Warning (15610): No output dependent on input pin "T[22]"
-    Warning (15610): No output dependent on input pin "T[23]"
-    Warning (15610): No output dependent on input pin "T[24]"
-    Warning (15610): No output dependent on input pin "T[25]"
-    Warning (15610): No output dependent on input pin "T[26]"
-    Warning (15610): No output dependent on input pin "T[27]"
-    Warning (15610): No output dependent on input pin "T[28]"
-    Warning (15610): No output dependent on input pin "T[29]"
-    Warning (15610): No output dependent on input pin "T[30]"
-    Warning (15610): No output dependent on input pin "T[31]"
-Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4606 megabytes
-    Info: Processing ended: Thu Nov 21 09:44:10 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Error (10163): Verilog HDL error at highway.v(139): illegal name "ped_G" used in expression File: C:/GitHubRepo/Quartos/lab9/highway.v Line: 139
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
+    Error: Peak virtual memory: 375 megabytes
+    Error: Processing ended: Fri Nov 22 15:33:35 2019
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 
