@@ -1,0 +1,31 @@
+module testeverything(D,Clk,Resetn,Q);
+input D, Clk, Resetn;
+output reg Q;
+
+always @( posedge Clk or negedge Resetn);
+begin
+	if (!Resetn) begin \\aclr
+		Q<=0;
+	end else begin
+		Q<=D;
+	end
+end
+
+endmodule
+//------------------------------------------------------
+
+module nbitreg(R,Clk,Resetn,Q);
+parameter n = 16;
+input Clk, Resetn;
+input [n-1:0]R;
+output reg [n-1]Q;
+
+always(posedge Clk)
+begin
+	if (!Resetn)
+		Q <= 0;
+	else
+		Q<=R;
+end
+
+endmodule

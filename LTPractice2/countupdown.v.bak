@@ -1,0 +1,14 @@
+module countupdown(Clk,UpDown,Resetn,Q);
+parameter n = 4;
+input Clk,Updown;
+output reg [n-1:0]Q;
+
+always@(posedge Clk)
+begin	
+	if (!Resetn)
+		Q <= 0;
+	else
+		Q <= Q + (Updown ? 1 : -1); // 1 is positive 0 is negative
+end
+
+endmodule		

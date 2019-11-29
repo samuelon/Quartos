@@ -1,0 +1,64 @@
+module FSMSimple(w,Clk,z);
+
+input w;
+output reg z;
+reg [1:0]currSt;
+reg [1:0]nextSt;
+assign A = 2'b01; //1
+assign B = 2'b10; //2
+assign C = 2'b11; //3
+
+initial 
+begin
+	currSt = A;
+end 
+
+always @ (posedge Clk)
+begin
+	case(currSt)
+		A:
+		begin
+			z = 1'b0;
+			
+			if (w) begin
+			nextSt = B ;
+			
+			end else begin 
+				nextSt = A; 
+			end	
+		end
+		B:
+		begin
+			z = 1'b0;
+			
+			if (w) begin
+				nextSt = C;
+			end else begin
+				nextSt = B;
+			end
+		end
+		C:
+		begin
+			z = 1'b1;
+			
+			if(w) begin
+				nextSt = C;
+			end else begin
+				nextSt = A;
+			end
+		end
+	endcase
+end
+
+always@(posedge Clk or negedge Resetn)
+begin
+	if (!Resetn) begin
+		currSt <= A;
+	end else begin
+		currSt <= nextSt;
+	end
+end
+
+assign 
+	
+		

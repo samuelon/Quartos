@@ -1,0 +1,5 @@
+module TFFupcountSyn(T, Clk, Resetn, Q);
+input T, Clk, Resetn;
+output reg Q;
+
+TFlipflop 

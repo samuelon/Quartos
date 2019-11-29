@@ -1,0 +1,14 @@
+module upcount(n,Clk,Resetn,Q,Qn);
+input Clk,Resetn;
+output reg [3:0]Q;
+output reg [3:0]Q;
+integer k;
+
+always @ ( posedge Clk)
+begin
+	if(!Resetn)
+		Q<=1'b0;
+	else
+			Q<= Q + 1;
+end
+assign Qn = ~Q;

@@ -1,0 +1,38 @@
+|TFFupcountSyn
+T => T.IN1
+Clk => Clk.IN4
+Resetn => Resetn.IN4
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= TFlipflop:stage1.port3
+Q[2] <= TFlipflop:stage2.port3
+Q[3] <= TFlipflop:stage3.port3
+
+
+|TFFupcountSyn|TFlipflop:stage0
+T => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Resetn => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TFFupcountSyn|TFlipflop:stage1
+T => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Resetn => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TFFupcountSyn|TFlipflop:stage2
+T => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Resetn => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TFFupcountSyn|TFlipflop:stage3
+T => Q~reg0.ENA
+Clk => Q~reg0.CLK
+Resetn => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

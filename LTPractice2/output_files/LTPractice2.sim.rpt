@@ -1,0 +1,184 @@
+Simulator report for LTPractice2
+Fri Nov 29 01:19:22 2019
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 15 nodes     ;
+; Simulation Coverage         ;      73.33 % ;
+; Total Number of Transitions ; 276          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                            ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                          ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                           ; Timing        ;
+; Start time                                                                                 ; 0 ns                                             ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                              ;               ;
+; Vector input source                                                                        ; C:/GitHubRepo/Quartos/LTPractice2/tffupcount.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                               ; On            ;
+; Check outputs                                                                              ; Off                                              ; Off           ;
+; Report simulation coverage                                                                 ; On                                               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                               ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                               ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                               ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                              ; Off           ;
+; Detect glitches                                                                            ; Off                                              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                              ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                             ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      73.33 % ;
+; Total nodes checked                                 ; 15           ;
+; Total output ports checked                          ; 15           ;
+; Total output ports with complete 1/0-value coverage ; 11           ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 4            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                  ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |TFFupcountSyn|TFlipflop:stage0|Q   ; |TFFupcountSyn|TFlipflop:stage0|Q   ; regout           ;
+; |TFFupcountSyn|TFlipflop:stage1|Q   ; |TFFupcountSyn|TFlipflop:stage1|Q   ; regout           ;
+; |TFFupcountSyn|TFlipflop:stage2|Q   ; |TFFupcountSyn|TFlipflop:stage2|Q   ; regout           ;
+; |TFFupcountSyn|TFlipflop:stage0|Q~0 ; |TFFupcountSyn|TFlipflop:stage0|Q~0 ; combout          ;
+; |TFFupcountSyn|TFlipflop:stage1|Q~0 ; |TFFupcountSyn|TFlipflop:stage1|Q~0 ; combout          ;
+; |TFFupcountSyn|TFlipflop:stage2|Q~0 ; |TFFupcountSyn|TFlipflop:stage2|Q~0 ; combout          ;
+; |TFFupcountSyn|Q[0]                 ; |TFFupcountSyn|Q[0]                 ; padio            ;
+; |TFFupcountSyn|Q[1]                 ; |TFFupcountSyn|Q[1]                 ; padio            ;
+; |TFFupcountSyn|Q[2]                 ; |TFFupcountSyn|Q[2]                 ; padio            ;
+; |TFFupcountSyn|Clk                  ; |TFFupcountSyn|Clk~corein           ; combout          ;
+; |TFFupcountSyn|Clk~clkctrl          ; |TFFupcountSyn|Clk~clkctrl          ; outclk           ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |TFFupcountSyn|Q[3]           ; |TFFupcountSyn|Q[3]           ; padio            ;
+; |TFFupcountSyn|T              ; |TFFupcountSyn|T~corein       ; combout          ;
+; |TFFupcountSyn|Resetn         ; |TFFupcountSyn|Resetn~corein  ; combout          ;
+; |TFFupcountSyn|Resetn~clkctrl ; |TFFupcountSyn|Resetn~clkctrl ; outclk           ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |TFFupcountSyn|Q[3]           ; |TFFupcountSyn|Q[3]           ; padio            ;
+; |TFFupcountSyn|T              ; |TFFupcountSyn|T~corein       ; combout          ;
+; |TFFupcountSyn|Resetn         ; |TFFupcountSyn|Resetn~corein  ; combout          ;
+; |TFFupcountSyn|Resetn~clkctrl ; |TFFupcountSyn|Resetn~clkctrl ; outclk           ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Fri Nov 29 01:19:22 2019
+Info: Command: quartus_sim --simulation_results_format=VWF LTPractice2 -c LTPractice2
+Info (324025): Using vector source file "C:/GitHubRepo/Quartos/LTPractice2/tffupcount.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Rstn" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|TFFupcountSyn|Resetn"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      73.33 %
+Info (328052): Number of transitions in simulation is 276
+Info (324045): Vector file LTPractice2.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4492 megabytes
+    Info: Processing ended: Fri Nov 29 01:19:22 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
